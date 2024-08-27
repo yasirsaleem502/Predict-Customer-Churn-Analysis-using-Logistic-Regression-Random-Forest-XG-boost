@@ -28,57 +28,67 @@ Customer churn, the process of customers discontinuing their relationship with a
 
 ## Dataset Description
 
-This is a ticket pricing monitoring system. It scrapes ticket pricing data periodically and stores it in a database. Ticket pricing changes based on demand and time, and significant price differences can exist. We are creating this product mainly with ourselves in mind. Users can set up alarms using an email, choosing an origin and destination (cities), time (date and hour range picker) choosing a price reduction over mean price, etc.
+Companies want to improve and maintain a healthy relationship and environment for their employees. This can be achieved by recognizing and understanding the important factors that are associated with employee turnover and taking care of them might add into the productivity and growth of the employees. These insights can help managers for grabing the opportunity to take corrective steps to build and preserve their successful business.
 
-Following is the description for columns in the dataset**
+Column Description
 
--insert_date:     date and time when the price was collected and written in the database
+-satisfacion_level:           Showing satisfaction of a particular employee
 
--origin:              origin city
+-last_evaluation:             Showing last evaluation of a particular employee
 
--destination:      destination city
+-number_project:              Showing number of projects handled a particular employee
 
--start_date:        train departure time
+-average_montly_hours:        Showing the monthly hours that were spent the particular employee
 
--end_date:         train arrival time
+-time_spend_company:         Shows the number of years spent by the particular employee in the company.
 
--train_type:         train service name
+-Work_accident:             Showing an employee has whether been part of the company or not.
 
--price:                 price
+-left:                     Tells either and employee has left the company or not. Shows two values 0= not left, 1= left
 
--train_class:      ticket class, tourist, business, etc.
+-promotion_last_5years:   Shows that the whether the employee has got any promotion in the last 5 years or not.
 
--fare:                  ticket fare, round trip, etc
+-dept:                    Shows the departments
 
-dataset link : https://www.kaggle.com/datasets/muhammadyasirsaleem/tickets-pricing-monitoring-system-dataset
+-salary:                  Shows the salary type of the employee
+
 
 ## Data Preprocessing
 
-Data preprocessing steps included:
-- Handling missing values
-- Encoding categorical variables (e.g., travel class, train type)
-- Scaling numerical features (e.g., travel distance)
+To prepare the data for modelling, the following steps were taken:
+
+Handling Missing Values: Imputing missing values or removing rows/columns with missing data.
+Encoding Categorical Variables: Transforming categorical features into numerical formats using one-hot encoding.
+Feature Scaling: Normalizing numerical features to improve model performance.
+Data Splitting: Dividing the dataset into training and testing sets to evaluate the models.
 
 ## Exploratory Data Analysis
 
-In this section, the relationships between different features and ticket prices were analyzed. Visualizations and statistical methods were used to identify trends, correlations, and outliers in the data.
+Exploratory Data Analysis (EDA) helps uncover patterns, correlations, and relationships within the data. Key aspects include:
 
-## Model Building
+Distribution Analysis: Understanding the spread and central tendency of features.
+Correlation Matrix: Visualizing correlations between different features.
+Churn Rate Analysis: Investigating how features like contract type, tenure, and charges relate to churn.
 
-A Linear Regression model was built using Scikit-learn. The model was trained on the preprocessed dataset, using the features mentioned above to predict the train ticket prices.
+# Modelling
 
-## Model Evaluation
+Logistic Regression:
+Logistic Regression is employed as a baseline model for churn prediction. It is a linear model particularly effective for binary classification tasks like this one.
 
-The model's performance was assessed using various metrics:
-- **Mean Absolute Error (MAE)**
-- **Mean Squared Error (MSE)**
-- **R-squared (R²)**
+Random Forest:
+Random Forest, an ensemble method, builds multiple decision trees and merges them to provide a more accurate and stable prediction. It handles large datasets with numerous features efficiently and captures complex interactions between variables.
 
-These metrics helped evaluate the accuracy and effectiveness of the model.
+Model Evaluation
+The models are evaluated using several metrics:
 
-## Conclusion
+Accuracy: The ratio of correctly predicted instances to the total instances.
+Precision: The ratio of correctly predicted positive observations to the total predicted positives.
+Recall: The ratio of correctly predicted positive observations to all observations in the actual class.
+F1-Score: The weighted average of Precision and Recall.
+ROC-AUC Score: The area under the Receiver Operating Characteristic curve, indicating model performance in distinguishing between the classes.
 
-The Linear Regression model provided a good prediction of train ticket prices based on the selected features. This model can be further improved by incorporating additional data or using more complex algorithms.
+Conclusion
+This project demonstrates the effectiveness of Logistic Regression and Random Forest in predicting customer churn. By identifying key factors influencing churn, businesses can implement targeted strategies to retain customers and reduce churn rates.
 
 ## How to Run
 
