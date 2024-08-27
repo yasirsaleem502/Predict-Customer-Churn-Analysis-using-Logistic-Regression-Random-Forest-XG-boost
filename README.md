@@ -51,6 +51,8 @@ Column Description
 
 -**salary**:                  Shows the salary type of the employee
 
+Dataset link : https://www.kaggle.com/datasets/muhammadyasirsaleem/predict-customer-churn-dataset
+
 
 ## Data Preprocessing
 
