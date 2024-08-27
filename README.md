@@ -128,7 +128,6 @@ To run the project:
 3. Open the Jupyter Notebook and execute the cells to train and evaluate the model.
 
 ```bash
-git clone https://github.com/yasirsaleem502/Train-Ticket-Price-Predicition-using-Linear-Regression.git
-cd Train-Ticket-Price-Prediction
+git clone https://github.com/yasirsaleem502/Predict-Customer-Churn-Analysis-using-Logistic-Regression-Random-Forest-XG-boost.git
+cd customer-churn-analysis
 pip install -r requirements.txt
-jupyter notebook
