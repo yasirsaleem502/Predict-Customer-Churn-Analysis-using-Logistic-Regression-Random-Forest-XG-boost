@@ -24,7 +24,7 @@ This project focuses on predicting customer churn using Logistic Regression and 
 
 ## Introduction
 
-Train ticket prices can vary significantly based on multiple factors. This project focuses on using a Linear Regression model to predict the price of train tickets by analyzing key features that affect pricing. This model can be valuable for travelers, allowing them to anticipate costs and make informed decisions.
+Customer churn, the process of customers discontinuing their relationship with a business, can significantly impact a company's revenue. This project applies machine learning techniques to predict customer churn using a dataset that includes customer demographics, service usage, and account information. The analysis lays the groundwork for understanding factors contributing to churn and helps in developing strategies to retain customers.
 
 ## Dataset Description
 
